@@ -1,0 +1,230 @@
+  /* ==========================================
+           1. CABEÇALHO E ESTRUTURA GERAL (PADRONIZADO)
+           ========================================== */
+        body {
+            background-color: #ffffff;
+            margin: 0 !important; /* Força o alinhamento total nas bordas da tela */
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333333;
+        }
+
+        #titulo {
+            background-color: #8b6b3f; 
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin: 0; 
+        }
+
+        nav {
+            background-color: #ffffff; 
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+          
+        .menu {
+            display: flex;          
+            justify-content: center; 
+            flex-wrap: wrap;        
+            gap: 25px; /* Ajustado para manter idêntico à Home e Quem Somos */
+        }
+
+        /* Menu minimalista padronizado */
+        .menu a {
+            font-family: "Inter", sans-serif;
+            font-size: 16px; /* Ajustado para manter idêntico à Home e Quem Somos */
+            font-weight: 600;
+            text-decoration: none; 
+            display: inline-block; 
+            padding: 8px 0;    
+            background-color: transparent; 
+            color: #555555;        
+            position: relative; 
+            transition: color 0.3s ease;
+        }
+
+        /* Efeito elegante da linha abaixo do menu */
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #8b6b3f;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .menu a:hover {
+            background-color: transparent; 
+            color: #8b6b3f; 
+        }
+
+        .menu a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* ==========================================
+           2. LAYOUT ZIGUEZAGUE DOS SERVIÇOS
+           ========================================== */
+        .nossos-servicos {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .nossos-servicos h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #222222; 
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        /* Traço dourado inferior padronizado */
+        .nossos-servicos h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #8b6b3f;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .lista-servicos {
+            display: flex;
+            flex-direction: column;
+            gap: 80px; 
+        }
+
+        .linha-servico {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* Alternância de lados do ziguezague */
+        .linha-servico:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .coluna-imagem {
+            flex: 1;
+        }
+
+        .coluna-imagem img {
+            width: 100%;
+            height: 380px; 
+            object-fit: cover;
+            border-radius: 8px; 
+            box-shadow: 0 10px 30px rgba(139, 107, 63, 0.05); 
+        }
+
+        .coluna-texto {
+            flex: 1;
+        }
+
+        .coluna-texto h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #8b6b3f; 
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        /* Linha decorativa abaixo do subtítulo */
+        .coluna-texto h3::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #8b6b3f; 
+            margin-top: 10px;
+        }
+
+        .coluna-texto p {
+            font-family: 'Inter', sans-serif; /* Ajustado para Inter para melhor legibilidade */
+            font-size: 16px;
+            line-height: 1.8; 
+            color: #555555;
+            text-align: justify;
+            margin-bottom: 25px;
+            margin-top: 20px;
+        }
+
+        .link-acao {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            color: #8b6b3f; 
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .link-acao:hover {
+            color: #6d522f;
+            transform: translateX(5px); 
+        }
+
+        /* ==========================================
+           3. CORPO CLÍNICO (BLOCO PREMIUM INTEGRADO)
+           ========================================== */
+        .corpo-clinico {
+            max-width: 1140px;
+            margin: 80px auto 60px auto;
+            padding: 45px 40px;
+            background-color: #fcfaf6; 
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #8b6b3f; 
+            border-top: 1px solid #f2edd2;
+            border-right: 1px solid #f2edd2;
+            border-bottom: 1px solid #f2edd2;
+            box-shadow: 0 8px 24px rgba(139, 107, 63, 0.03);
+            box-sizing: border-box;
+        }
+
+        .corpo-clinico h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #222222; 
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .corpo-clinico p {
+            font-family: 'Inter', sans-serif; /* Ajustado para Inter */
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 850px;
+            margin: 0 auto;
+            color: #555555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .linha-servico, .linha-servico:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .coluna-imagem img {
+                height: 250px;
+            }
+            .corpo-clinico {
+                padding: 30px 20px;
+            }
+        }

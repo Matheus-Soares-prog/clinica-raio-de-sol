@@ -1,0 +1,292 @@
+ /* ==========================================
+           1. CABEÇALHO E ESTRUTURA GERAL (PADRONIZADO)
+           ========================================== */
+        body {
+            background-color: #ffffff;
+            margin: 0 !important; /* Força o alinhamento total nas bordas da tela */
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333333;
+        }
+
+        #titulo {
+            background-color: #8b6b3f; 
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin: 0; 
+        }
+
+        nav {
+            background-color: #ffffff; 
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+          
+        .menu {
+            display: flex;          
+            justify-content: center; 
+            flex-wrap: wrap;        
+            gap: 25px; /* Alinhado com o padrão de 25px da estrutura */
+        }
+
+        /* Menu minimalista padronizado */
+        .menu a {
+            font-family: "Inter", sans-serif;
+            font-size: 16px; /* Alinhado com o padrão de 16px da estrutura */
+            font-weight: 600;
+            text-decoration: none; 
+            display: inline-block; 
+            padding: 8px 0;    
+            background-color: transparent; 
+            color: #555555;        
+            position: relative; 
+            transition: color 0.3s ease;
+        }
+
+        /* Efeito elegante da linha abaixo do menu */
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #8b6b3f;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .menu a:hover {
+            background-color: transparent; 
+            color: #8b6b3f; 
+        }
+
+        .menu a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* ==========================================
+           2. SEÇÃO DE CONTATO (LAYOUT DO FORMULÁRIO)
+           ========================================== */
+        .secao-contato {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .secao-contato h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #222222;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .secao-contato h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #8b6b3f;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Grid dividindo informações de texto e o formulário real */
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Bloco de Informações da Esquerda */
+        .info-contato h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            color: #8b6b3f;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .info-contato p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+
+        .detalhes-lista {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .detalhes-lista li {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #444444;
+        }
+
+        .detalhes-lista strong {
+            color: #8b6b3f;
+            display: block;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        /* Caixa do Formulário da Direita */
+        .container-formulario {
+            background-color: #fcfaf6; /* Nosso areia sutil oficial */
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #f2edd2;
+            box-shadow: 0 8px 24px rgba(139, 107, 63, 0.04);
+        }
+
+        .grupo-campo {
+            margin-bottom: 20px;
+        }
+
+        .grupo-campo label {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #444444;
+            margin-bottom: 8px;
+        }
+
+        /* Inputs modernos e minimalistas (Incluído o select aqui) */
+        .grupo-campo input, 
+        .grupo-campo select,
+        .grupo-campo textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif; /* Inter para os textos digitados e placeholders */
+            font-size: 15px;
+            color: #333333;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Efeito de foco premium ao clicar nas caixas de texto e seletores */
+        .grupo-campo input:focus, 
+        .grupo-campo select:focus,
+        .grupo-campo textarea:focus {
+            outline: none;
+            border-color: #8b6b3f;
+            box-shadow: 0 0 0 3px rgba(139, 107, 63, 0.15);
+        }
+
+        .grupo-campo textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Botão Enviar com peso e presença de marca */
+        .botao-enviar {
+            width: 100%;
+            background-color: #8b6b3f;
+            color: #ffffff;
+            border: none;
+            padding: 14px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 12px rgba(139, 107, 63, 0.2);
+        }
+
+        .botao-enviar:hover {
+            background-color: #725630;
+            transform: translateY(-2px);
+        }
+
+        .botao-enviar:active {
+            transform: translateY(0);
+        }
+
+        /* ==========================================
+           3. ESTILIZAÇÃO DA TABELA DE HORÁRIOS
+           ========================================== */
+        .container-tabela {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .container-tabela h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            color: #8b6b3f;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tabela-horarios {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', sans-serif;
+            margin-top: 15px;
+        }
+
+        .tabela-horarios th {
+            background-color: #8b6b3f;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 15px;
+        }
+
+        .tabela-horarios td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #555555;
+            font-size: 15px;
+        }
+
+        /* Linhas alternadas para facilitar a leitura */
+        .tabela-horarios tbody tr:nth-child(even) {
+            background-color: #fcfaf6;
+        }
+
+        .tabela-horarios .plantao {
+            font-weight: 600;
+            color: #8b6b3f;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .contato-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .container-formulario {
+                padding: 25px;
+            }
+        }

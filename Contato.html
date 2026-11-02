@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Reabilitação - Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="titulo">Clínica de Reabilitação Raio de Sol</h1>
+    <nav>
+      <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="Quem_somos.html">Quem somos</a>
+        <a href="serviços.html">Serviços</a>
+        <a href="Estrutura.html">Estrutura</a>
+        <a href="jardim.html">O Jardim</a>
+        <a href="consultorio.html">Consultório</a>
+        <a href="sala_de_espera.html">Recepção</a>
+        <a href="Contato.html">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="secao-contato">
+    <h2>Entre em Contato</h2>
+
+    <div class="contato-grid">
+        
+        <div class="info-contato">
+            <h2>Estamos aqui para ajudar</h2>
+            <p>
+                Dar o primeiro passo em direção à recuperação exige coragem, e você não precisa caminhar sozinho. Nossa equipe de acolhimento está pronta para ouvir sua história, tirar dúvidas sobre nossos tratamentos e agendar uma visita guiada à nossa estrutura.
+            </p>
+            
+            <ul class="detalhes-lista">
+                <li>
+                    <strong>Endereço Institucional</strong>
+                    Estrada da Serra, 1250 - Vale dos Sóis, Gravataí - RS
+                </li>
+                <li>
+                    <strong>Telefone e Plantão 24h</strong>
+                    (51) 3003-7890 / (51) 99555-4321
+                </li>
+                <li>
+                    <strong>E-mail de Atendimento</strong>
+                    acolhimento@clinicaraiodesol.com.br
+                </li>
+            </ul>
+
+            <div class="container-tabela">
+                <h3>Horário de Atendimento</h3>
+                <table class="tabela-horarios">
+                    <thead>
+                        <tr>
+                            <th>Período</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda a Sexta-feira</td>
+                            <td>07:00 às 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sábados</td>
+                            <td>08:00 às 13:00</td>
+                        </tr>
+                        <tr>
+                            <td>Domingos e Feriados</td>
+                            <td class="plantao">Plantão 24h (Emergências)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container-formulario">
+            <form action="#" method="POST">
+                
+                <div class="grupo-campo">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="email">E-mail para Retorno</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefone">Telefone / WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(51) 99555-4321" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="especialidade">Especialidade Procurada</label>
+                    <select id="especialidade" name="especialidade" required>
+                        <option value="" disabled selected>Selecione o tratamento...</option>
+                        <option value="fisioterapia">Fisioterapia Motora</option>
+                        <option value="psicologia">Acompanhamento Psicológico</option>
+                        <option value="terapia-ocupacional">Terapêutica Ocupacional</option>
+                        <option value="internacao">Internação e Reabilitação Integral</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="data_visita">Previsão para Visita ou Consulta</label>
+                    <input type="date" id="data_visita" name="data_visita" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensagem">Como podemos te apoiar?</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva brevemente o seu caso ou dúvida..." required></textarea>
+                </div>
+
+                <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+
+            </form>
+        </div>
+
+    </div>
+  </section>
+<footer>
+ <p>&copy;Clínica de Reabilitação Raio de Sol. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

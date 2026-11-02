@@ -1,0 +1,285 @@
+ /* ==========================================
+           1. CABEÇALHO E ESTRUTURA GERAL (PADRONIZADO)
+           ========================================== */
+        body {
+            background-color: #ffffff;
+            margin: 0 !important; /* Força o alinhamento total nas bordas da tela */
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333333;
+        }
+
+        #titulo {
+            background-color: #8b6b3f; 
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin: 0; 
+        }
+
+        nav {
+            background-color: #ffffff; 
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+          
+        .menu {
+            display: flex;          
+            justify-content: center; 
+            flex-wrap: wrap;        
+            gap: 25px; /* Ajustado para bater com o padrão da Home */
+        }
+
+        /* Menu minimalista padronizado */
+        .menu a {
+            font-family: "Inter", sans-serif;
+            font-size: 16px; /* Ajustado para bater com o padrão da Home */
+            font-weight: 600;
+            text-decoration: none; 
+            display: inline-block; 
+            padding: 8px 0;    
+            background-color: transparent; 
+            color: #555555;        
+            position: relative; 
+            transition: color 0.3s ease;
+        }
+
+        /* Efeito elegante da linha abaixo do menu */
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #8b6b3f;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .menu a:hover {
+            background-color: transparent; 
+            color: #8b6b3f; 
+        }
+
+        .menu a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* ==========================================
+           2. SEÇÃO: NOSSA HISTÓRIA
+           ========================================== */
+        #Nossa-historia {
+            max-width: 900px; 
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #Nossa-historia h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #222222; /* Grafite escuro trazendo sobriedade */
+            margin-top: 60px;
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        /* Traço dourado inferior padronizado */
+        #Nossa-historia h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #8b6b3f;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        #Nossa-historia img {
+            width: 100%;
+            display: block;
+            margin: 30px auto;
+            border-radius: 8px; /* Cantos suavizados combinando com a home */
+            box-shadow: 0 10px 30px rgba(139, 107, 63, 0.06);
+        }
+
+        .texto-historia {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555555;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        /* ==========================================
+           3. SEÇÃO MULTIMÍDIA (VÍDEO E ÁUDIO)
+           ========================================== */
+        .secao-multimidia {
+            background-color: #fcfaf6; /* Nosso areia sutil oficial */
+            border-top: 1px solid #f2edd2;
+            border-bottom: 1px solid #f2edd2;
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .conteudo-multimidia {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .conteudo-multimidia h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            color: #222222;
+            margin-bottom: 15px;
+        }
+
+        .conteudo-multimidia p {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 35px;
+        }
+
+        .video-container {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 10px 25px rgba(139, 107, 63, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        .audio-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 50px;
+            border: 1px solid #e5dfc5;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .audio-container label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #8b6b3f;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .audio-container audio {
+            width: 100%;
+        }
+
+        /* ==========================================
+           4. SEÇÃO: FILOSOFIA (GRID PREMIUM)
+           ========================================== */
+        .diretrizes-clinica {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 30px;
+        }
+
+        .diretrizes-clinica > h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #222222;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .diretrizes-clinica > h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #8b6b3f;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .grid-revista {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px; /* Alinhado com o gap dos pilares da home */
+        }
+
+        .bloco-filosofia-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: #fcfaf6; /* Fundo areia integrado */
+            padding: 35px 30px;
+            border-radius: 8px;
+            border: 1px solid #f2edd2;
+            box-shadow: 0 8px 24px rgba(139, 107, 63, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        /* Efeito de flutuar sutil idêntico aos pilares */
+        .bloco-filosofia-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(139, 107, 63, 0.08);
+        }
+
+        .bloco-filosofia-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #8b6b3f;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #e5dfc5; /* Linha de divisão interna mais suave */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .bloco-filosofia-card p {
+            font-size: 15px;
+            font-style: italic; 
+            color: #666666;     
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 80px; 
+        }
+
+        ul {
+            padding-left: 18px;
+            color: #555555;
+            margin-top: auto; 
+        }
+
+        li {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .grid-revista {
+                grid-template-columns: 1fr;
+            }
+            .bloco-filosofia-card p {
+                min-height: auto;
+            }
+        }

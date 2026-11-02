@@ -1,0 +1,185 @@
+   /* ==========================================
+           1. CONFIGURAÇÕES GERAIS E ESTRUTURA DO TOPO
+           ========================================== */
+        body {
+            background-color: #ffffff;
+            margin: 0 !important; /* Força o alinhamento total nas bordas da tela */
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333333;
+        }
+
+        #titulo {
+            background-color: #8b6b3f; 
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin: 0; 
+        }
+
+        nav {
+            background-color: #ffffff; 
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+          
+        .menu {
+            display: flex;          
+            justify-content: center; 
+            flex-wrap: wrap;        
+            gap: 25px; /* Espaçamento moderno e leve */
+        }
+
+        /* Menu minimalista padronizado */
+        .menu a {
+            font-family: "Inter", sans-serif;
+            font-size: 16px; 
+            font-weight: 600;
+            text-decoration: none; 
+            display: inline-block; 
+            padding: 8px 0;    
+            background-color: transparent; 
+            color: #555555;        
+            position: relative; 
+            transition: color 0.3s ease;
+        }
+
+        /* Efeito elegante da linha abaixo do menu */
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #8b6b3f;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .menu a:hover {
+            background-color: transparent; 
+            color: #8b6b3f; 
+        }
+
+        .menu a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* ==========================================
+           2. CONFIGURAÇÃO DO BANNER PRINCIPAL
+           ========================================== */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; 
+        }
+
+        .banner-principal {
+            position: relative;
+        }
+
+        #frase-efeito {
+            position: absolute;
+            bottom: 15%; /* Ajuste responsivo para não quebrar em telas menores */
+            left: 80px;
+            max-width: 550px;
+            color: white;
+            font-size: 42px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+            z-index: 10;
+            margin: 0;
+        }
+
+        /* ==========================================
+           3. INTRODUÇÃO E PILARES DA CLÍNICA
+           ========================================== */
+        .introducao-servicos h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #222222; /* Grafite escuro para trazer sobriedade */
+            margin-top: 70px;
+            margin-bottom: 30px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        /* Pequeno traço abaixo do h2 para conversar com a página da estrutura */
+        .introducao-servicos h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #8b6b3f;
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .texto-destaque {
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+            color: #666666;
+        }
+
+        .pilares-clinica {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+
+        /* Refinamento dos Pilares para harmonizar com a Estrutura */
+        .pilar {
+            background-color: #fcfaf6; /* Mesma cor areia suave que usamos no fundo da estrutura */
+            width: 320px;
+            padding: 35px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #f2edd2; /* Mesma borda sutil da estrutura */
+            box-shadow: 0 8px 24px rgba(139, 107, 63, 0.04); /* Sombra integrada quente */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .pilar:hover {
+            transform: translateY(-5px); /* Mesmo efeito de flutuar sutil da estrutura */
+            box-shadow: 0 12px 30px rgba(139, 107, 63, 0.08);
+        }
+
+        .pilar h3 {
+            color: #8b6b3f; /* Padronizado com o marrom oficial */
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .pilar p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555555;
+            margin: 0;
+        }
+
+        .texto-fechamento {
+            max-width: 850px;
+            margin: 60px auto 80px auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666666;
+        }
