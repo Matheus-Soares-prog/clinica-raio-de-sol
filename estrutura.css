@@ -1,167 +1,165 @@
- /* ==========================================
-           1. CONFIGURAÇÕES GERAIS (O RESPIRO DO DESIGN)
-           ========================================== */
-        body {
-            background-color: #ffffff;
-            margin: 0 !important; /* Força o alinhamento total nas bordas da tela */
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #333333;
-        }
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+}
 
-        /* ==========================================
-           2. HEADER E MENU (SOFISTICAÇÃO E LEVEZA)
-           ========================================== */
-        #titulo {
-            background-color: #8b6b3f; 
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 42px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
-            margin: 0;
-        }
+#titulo {
+    background-color: #8b6b3f;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
 
-        nav {
-            background-color: #ffffff; 
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-          
-        .menu {
-            display: flex;          
-            justify-content: center; 
-            flex-wrap: wrap;        
-            gap: 25px; /* Sincronizado com o padrão de 25px das outras páginas */
-        }
+nav {
+    background-color: #ffffff;
+    padding: 18px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
 
-        .menu a {
-            font-family: "Inter", sans-serif;
-            font-size: 16px; /* Mantido o padrão visual unificado */
-            font-weight: 600;
-            text-decoration: none; 
-            display: inline-block; 
-            padding: 8px 0;    
-            background-color: transparent; 
-            color: #555555;        
-            position: relative; 
-            transition: color 0.3s ease;
-        }
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
-        .menu a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #8b6b3f;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
+.menu a {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #555555;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
 
-        .menu a:hover {
-            background-color: transparent; 
-            color: #8b6b3f; 
-        }
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8b6b3f;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
 
-        .menu a:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
+.menu a:hover {
+    color: #8b6b3f;
+}
 
-        /* ==========================================
-           3. SEÇÃO DA ESTRUTURA (EQUILÍBRIO VISUAL)
-           ========================================== */
-        .secao-estrutura {
-            background-color: #fcfaf6; 
-            padding: 60px 0 80px 0; 
-            margin-top: 40px;
-            border-top: 1px solid #f2edd2; 
-            border-bottom: 1px solid #f2edd2;
-        }
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
-        .secao-estrutura h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: #222222;
-            text-align: center; 
-            margin-top: 0;
-            margin-bottom: 40px; 
-            position: relative;
-        }
+.secao-estrutura {
+    background-color: #fcfaf6;
+    padding: 60px 0;
+    margin-top: 40px;
+    border-top: 1px solid #f2edd2;
+    border-bottom: 1px solid #f2edd2;
+}
 
-        .secao-estrutura h3::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #8b6b3f;
-            margin: 12px auto 0 auto;
-            border-radius: 2px;
-        }
+.secao-estrutura h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222222;
+    text-align: center;
+    margin: 0 0 40px 0;
+    position: relative;
+}
 
-        /* Container do Carrossel */
-        .carrossel-container {
-            width: 100%;
-            overflow-x: auto; 
-            scroll-behavior: smooth; 
-            padding-bottom: 25px; 
-        }
+.secao-estrutura h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #8b6b3f;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
+}
 
-        /* O trilho das imagens */
-        .carrossel-track {
-            display: flex;
-            gap: 20px; 
-            padding-left: 5%; 
-            padding-right: 5%; 
-        }
+.carrossel-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 25px;
+}
 
-        /* Ajuste para alinhar os elementos corretamente no trilho */
-        .carrossel-track a {
-            text-decoration: none;
-            display: block;
-            flex-shrink: 0;
-        }
+.carrossel-track {
+    display: flex;
+    gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
-        /* As Imagens do Carrossel */
-        .carrossel-track img {
-            width: 460px; 
-            height: 310px; 
-            object-fit: cover; 
-            border-radius: 8px; 
-            display: block;
-            flex-shrink: 0; 
-            box-shadow: 0 10px 30px rgba(139, 107, 63, 0.06); 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.carrossel-track a {
+    text-decoration: none;
+    display: block;
+    flex-shrink: 0;
+}
 
-        /* Efeito de elevação idêntico ao dos outros cards do ecossistema */
-        .carrossel-track img:hover,
-        .carrossel-track a:hover img {
-            transform: translateY(-5px); 
-            box-shadow: 0 15px 35px rgba(139, 107, 63, 0.12);
-        }
+.carrossel-track img {
+    width: 460px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    flex-shrink: 0;
+}
 
-        /* Customização fina da barra de rolagem (Foco em UI/UX) */
-        .carrossel-container::-webkit-scrollbar {
-            height: 6px;
-        }
-        .carrossel-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            margin: 0 5%;
-            border-radius: 10px;
-        }
-        .carrossel-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
-        .carrossel-container::-webkit-scrollbar-thumb:hover {
-            background: #8b6b3f; 
-        }
+footer {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfaf6;
+    color: #666666;
+    padding: 30px 20px;
+    border-top: 1px solid #f2edd2;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    #titulo {
+        font-size: 26px;
+        padding: 25px 15px;
+    }
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 15px;
+        padding: 6px 10px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f7f5f0;
+    }
+
+    .menu a::after {
+        display: none;
+    }
+
+    .carrossel-track img {
+        width: 300px;
+        height: 220px;
+    }
+}
